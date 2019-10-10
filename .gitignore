@@ -1,0 +1,15 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Images
+*.jpeg
+*.jpg
+*.png
+*.svg
+
+# Other
+hidden
+*.log
