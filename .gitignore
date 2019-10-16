@@ -4,12 +4,6 @@
 out
 gen
 
-# Images
-*.jpeg
-*.jpg
-*.png
-*.svg
-
 # Other
 hidden
 *.log

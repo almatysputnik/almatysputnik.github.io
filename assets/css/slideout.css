@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/** Slideout.js */
+
+.slideout-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 256px;
+    width: var(--slideout-menu-width);
+    min-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #000;
+    background-color: var(--bg-color-menu);
+    /* display: none; */
+}
+
+.slideout-menu-left {
+    left: 0;
+    z-index: 0;
+}
+
+.slideout-menu-right {
+    right: 0;
+    z-index: -1;
+}
+
+.slideout-menu .menu-height {
+    min-height: var(--slideout-menu-height);
+}
+
+.slideout-menu .menu-row {
+    padding: 1em 0;
+}
+
+.slideout-menu .menu-separator {
+    height: 1.5em;
+}
+
+.slideout-menu .o-grid__cell--width-fixed {
+    width: 70px;
+    width: var(--slideout-panel-margin-left);
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    min-height: 100vh;
+    margin-left: 70px;
+    margin-left: var(--slideout-panel-margin-left);
+    background-color: #fff; /* A background-color is required */
+}
+
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+
+
+/** Open and Fix on desktop */
+
+@media (min-width: 74em) {
+    .slideout-menu .menu-separator {
+        height: 3em;
+    }
+
+    .slideout-menu-right {
+        z-index: 0;
+    }
+    .slideout-panel {
+        margin-left: 256px;
+        margin-left: var(--slideout-menu-width);
+    }
+    .slideout-toggle-left {
+        display: none !important;
+    }
+}
